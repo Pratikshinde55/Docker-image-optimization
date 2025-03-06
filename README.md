@@ -13,8 +13,9 @@
 3. **Scratch & Alpine image**
 4. **Multi-Stage Build**
 
-## 1: [Docker Build tool]
+# 1: [Docker Build tool]
 
+## Using legacy Docker build tool we can see how metadata is kept:
 Use old docker build tool :
 
       export DOCKER_BUILDKIT=0
