@@ -26,3 +26,23 @@ Use old docker build tool :
       
 ![build-old-buildtool](https://github.com/user-attachments/assets/92d5f649-c535-4850-ad55-3570505e33ea)
 ![Build-0](https://github.com/user-attachments/assets/4199fb7d-df50-4f83-8ab6-1896707b9777)
+
+     docker history old-flask:v1
+
+![docker-history](https://github.com/user-attachments/assets/8c86b777-19e0-4ae3-a7a2-2eadcf07ee3f)
+## Using Integrated Docker build tool-Buildkit
+Now docker pre-integrated with new Build tool that is BuildKit
+
+     export DOCKER_BUILDKIT=1
+
+Build Image:
+
+    docker build -t new-flask:v1 --no-cache .
+    docker build -t new-flask:v1  .
+
+![buildkit](https://github.com/user-attachments/assets/b2583bfd-810f-4170-aac2-b08498b9b62b)
+
+     docker history new-flask:v1
+     
+![docker-history](https://github.com/user-attachments/assets/5303283b-5da2-44a8-a328-9792697c50b2)
+
