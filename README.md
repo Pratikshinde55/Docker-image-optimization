@@ -7,4 +7,8 @@
 - A large image size image size results in higher CPU & RAM usage, leading to increase costs.
 
 
-
+## Some Image Optimization methods:
+1. **Build Tool**
+2. **Iamge layering**
+3. **Scratch & Alpine image**
+4. **Multi-Stage Build**
