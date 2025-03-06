@@ -1,0 +1,8 @@
+#Single Build image is very large for this case, This image size is more than 1GB 
+
+FROM gcc:latest
+WORKDIR /app
+COPY app.c app.c
+RUN gcc app.c -o app
+
+CMD ["./app"]
