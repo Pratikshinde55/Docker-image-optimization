@@ -1,0 +1,8 @@
+FROM gcc:latest as build1
+WORKDIR /app
+COPY app.c app.c
+RUN gcc app.c -o app
+
+FROM ubuntu:latest as build2
+COPY --from=build1 /app/app /app
+CMD ["./app"]
