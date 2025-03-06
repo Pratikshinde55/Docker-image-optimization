@@ -15,3 +15,13 @@
 
 ## 1: [Docker Build tool]
 
+Use old docker build tool :
+
+      export DOCKER_BUILDKIT=0
+
+![build-tool0](https://github.com/user-attachments/assets/1aa82799-a044-4680-b3ef-4d909b20e40e)
+
+      docker build -t old-flask:v1 .
+      
+![build-old-buildtool](https://github.com/user-attachments/assets/92d5f649-c535-4850-ad55-3570505e33ea)
+![Build-0](https://github.com/user-attachments/assets/4199fb7d-df50-4f83-8ab6-1896707b9777)
