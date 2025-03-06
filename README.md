@@ -60,7 +60,7 @@ If we reduce some layers then intermediate images and containers are less, So bu
 # 3. Multi-Stage build
 Now, use C programming code do multi-stage build Dockerfile. Because Multi-stage build we use depends on use case to use case, for python we don't need of compile but for Java and C/C++ we need compile.
 
-## without Multi-stage build :
+## without Multi-stage build meand Single-Stage build :
 This is simple C app, & Single-Build Stage Docker file compile & run the app.c
 ![single-app](https://github.com/user-attachments/assets/d1076e3f-9a30-468d-9a27-b197477a5443)
 
@@ -75,9 +75,21 @@ Launch Docker Container:
 
       docker run -it c-app:v1
       
-![image](https://github.com/user-attachments/assets/d19426c9-0233-43ca-be37-233e70306908)
+![run-docker](https://github.com/user-attachments/assets/d19426c9-0233-43ca-be37-233e70306908)
 
 
+## Using Multi-Build Stage:
+Here i use two Build stage, In 1st build stage i use gcc image which is neccessary to compile C-app this image size is very large & then i use ubuntu image which is small and also have C runtime to run C-app.
 
+![Dockerfile](https://github.com/user-attachments/assets/9649b271-8393-49b6-bd80-6aef0d5798fe)
 
+     docker build -t multic-app:v1 -f multiB-Dockerfile --no-cache .
 
+![multi-build](https://github.com/user-attachments/assets/4743de1c-e8c0-4890-80be-777992bff4c1)
+
+see very small size we found.
+![image-size](https://github.com/user-attachments/assets/211ce201-5f87-4df1-a926-9a42e3d4f965)
+
+     docker run multic-app:v1
+     
+![run-multistage](https://github.com/user-attachments/assets/b6a04125-f234-47a9-a9cb-85017b685171)
