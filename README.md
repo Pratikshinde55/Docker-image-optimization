@@ -29,6 +29,7 @@ Use old docker build tool :
 
      docker history old-flask:v1
 
+All metedata is kept as it is.
 ![docker-history](https://github.com/user-attachments/assets/8c86b777-19e0-4ae3-a7a2-2eadcf07ee3f)
 ## Using Integrated Docker build tool-Buildkit
 Now docker pre-integrated with new Build tool that is BuildKit
@@ -43,6 +44,8 @@ Build Image:
 ![buildkit](https://github.com/user-attachments/assets/b2583bfd-810f-4170-aac2-b08498b9b62b)
 
      docker history new-flask:v1
-     
+
+All metadata is removed showing missing      
 ![docker-history](https://github.com/user-attachments/assets/5303283b-5da2-44a8-a328-9792697c50b2)
 
+# 2.
