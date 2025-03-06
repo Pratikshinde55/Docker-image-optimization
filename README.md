@@ -60,6 +60,23 @@ If we reduce some layers then intermediate images and containers are less, So bu
 # 3. Multi-Stage build
 Now, use C programming code do multi-stage build Dockerfile. Because Multi-stage build we use depends on use case to use case, for python we don't need of compile but for Java and C/C++ we need compile.
 
+## without Multi-stage build :
+This is simple C app, & Single-Build Stage Docker file compile & run the app.c
+![single-app](https://github.com/user-attachments/assets/d1076e3f-9a30-468d-9a27-b197477a5443)
+
+      docker build -t c-app:v1 -f singleB-Dockerfile .
+
+![build-single-build](https://github.com/user-attachments/assets/5c05b855-ade2-4731-9c1a-c1a1d63f807c)
+
+See the size of image:
+![image](https://github.com/user-attachments/assets/4b554d78-1e9d-43a0-a21b-0f0b7ad785fb)
+
+Launch Docker Container:
+
+      docker run -it c-app:v1
+      
+![image](https://github.com/user-attachments/assets/d19426c9-0233-43ca-be37-233e70306908)
+
 
 
 
