@@ -57,3 +57,10 @@ If we reduce some layers then intermediate images and containers are less, So bu
       
 ![layers](https://github.com/user-attachments/assets/9ac80c92-503d-4ca2-b4b4-3fc80d4c2608)
 
+# 3. Multi-Stage build
+Now, use C programming code do multi-stage build Dockerfile. Because Multi-stage build we use depends on use case to use case, for python we don't need of compile but for Java and C/C++ we need compile.
+
+
+
+
+
