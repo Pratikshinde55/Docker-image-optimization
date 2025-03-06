@@ -49,6 +49,11 @@ All metadata is removed showing missing
 ![docker-history](https://github.com/user-attachments/assets/5303283b-5da2-44a8-a328-9792697c50b2)
 
 # 2. Image layering:
-we can reduce the layers in Dockerfile by using some keywords like **"&&"**.
+we can reduce the layers in Dockerfile by using some keywords like **"&&"**.Number of stages/steps decreases.
 
 If we reduce some layers then intermediate images and containers are less, So building is fast, & Docker BuildKIT uses **Parallelism**.
+
+      docker build -t layers-cut:v1 .
+      
+![layers](https://github.com/user-attachments/assets/9ac80c92-503d-4ca2-b4b4-3fc80d4c2608)
+
