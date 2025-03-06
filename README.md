@@ -9,7 +9,7 @@
 
 ## Some Image Optimization methods:
 1. **Build Tool**
-2. **Iamge layering**
+2. **Image layering**
 3. **Scratch & Alpine image**
 4. **Multi-Stage Build**
 
@@ -48,4 +48,7 @@ Build Image:
 All metadata is removed showing missing      
 ![docker-history](https://github.com/user-attachments/assets/5303283b-5da2-44a8-a328-9792697c50b2)
 
-# 2.
+# 2. Image layering:
+we can reduce the layers in Dockerfile by using some keywords like **"&&"**.
+
+If we reduce some layers then intermediate images and containers are less, So building is fast, & Docker BuildKIT uses **Parallelism**.
