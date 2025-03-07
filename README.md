@@ -96,6 +96,7 @@ see very small size we found.
 
 # 4. Distroless image:
 This images do not include anything from any distribution; They provide only bare minimum, such as the C runtime that we need.
+(Serch on google: distroless images --> Distroless" Container Images. - GitHub)
 
      docker build -t distroless-app:v1 -f  ditroless-Dockerfile .
 
