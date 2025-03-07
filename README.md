@@ -110,3 +110,4 @@ This images do not include anything from any distribution; They provide only bar
 ![run-cmd](https://github.com/user-attachments/assets/b179d78d-8b8b-4b9e-b014-ac3b77ea8059)
 
 # 5 Alpine image:
+This images size is very small & you can install the runtime or program that you neeed in that image.
