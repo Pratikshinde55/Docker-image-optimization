@@ -126,3 +126,19 @@ Image size is very small:
 # 6. Scratch image:
 Scratch image is smallest image ever.
 
+**an explicitly empty image, especially for building images "FROM scratch"**
+
+**Static Linking:** By using gcc `-static`, we ensuring that the binary includes everything it needs to run, so it can execute on the **scratch image** without needing shared libraries like libc.
+
+**Static Compilation:** The key part here is `RUN gcc -static app.c -o app`
+
+     docker build -t scratch-app:v1 -f scratch-Dockerfile .
+
+![Scratch-build](https://github.com/user-attachments/assets/806b86b2-a278-472f-9f33-3d9be3bbc5a6)
+
+Image size smallest now:
+![small-size-scratch](https://github.com/user-attachments/assets/57463241-5851-4c82-960c-5cb4b6ab269b)
+
+     docker run --rm scratch-app:v1
+
+![docker-run-scratch](https://github.com/user-attachments/assets/5ff3a19b-fa7d-4f0f-b489-251971272783)
