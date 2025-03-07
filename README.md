@@ -97,4 +97,15 @@ see very small size we found.
 # 4. Distroless image:
 This images do not include anything from any distribution; They provide only bare minimum, such as the C runtime that we need.
 
+     docker build -t distroless-app:v1 -f  ditroless-Dockerfile .
 
+![distroless-build](https://github.com/user-attachments/assets/4b84df6d-0e65-4ef9-9832-694b57cba6a3)
+
+      docker images distroless-app:v1
+![Size-of-image](https://github.com/user-attachments/assets/ecdc70ee-4dbd-4bea-b033-49b70c9a3709)
+
+      docker run -it distroless-app:v1
+
+![run-cmd](https://github.com/user-attachments/assets/b179d78d-8b8b-4b9e-b014-ac3b77ea8059)
+
+# 5 Alpine image:
