@@ -1,0 +1,9 @@
+FROM gcc:6 as Build-compile
+WORKDIR /app
+COPY app.c app.c
+## Compile the app statically (no external dependencies)
+RUN gcc -static  app.c -o  app
+
+FROM scratch as Build-RunC
+COPY --from=Build-compile /app/app /app
+CMD ["./app"]
