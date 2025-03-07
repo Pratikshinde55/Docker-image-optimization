@@ -93,3 +93,8 @@ see very small size we found.
      docker run multic-app:v1
      
 ![run-multistage](https://github.com/user-attachments/assets/b6a04125-f234-47a9-a9cb-85017b685171)
+
+# 4. Distroless image:
+This images do not include anything from any distribution; They provide only bare minimum, such as the C runtime that we need.
+
+
