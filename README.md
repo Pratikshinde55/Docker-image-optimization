@@ -63,33 +63,29 @@ If we reduce some layers then intermediate images and containers are less, So bu
 Now, use C programming code do multi-stage build Dockerfile. Because Multi-stage build we use depends on use case to use case, for python we don't need of compile but for Java and C/C++ we need compile.
 
 ## without Multi-stage build means Single-Stage build :
-This is simple C app, & Single-Build Stage Docker file compile & run the app.c
+- This is simple C app, & Single-Build Stage Docker file compile & run the app.c
 ![single-app](https://github.com/user-attachments/assets/d1076e3f-9a30-468d-9a27-b197477a5443)
 
       docker build -t c-app:v1 -f singleB-Dockerfile .
 
 ![build-single-build](https://github.com/user-attachments/assets/5c05b855-ade2-4731-9c1a-c1a1d63f807c)
-
-See the size of image:
+- See the size of image:
 ![image](https://github.com/user-attachments/assets/4b554d78-1e9d-43a0-a21b-0f0b7ad785fb)
-
 Launch Docker Container:
 
       docker run -it c-app:v1
       
 ![run-docker](https://github.com/user-attachments/assets/d19426c9-0233-43ca-be37-233e70306908)
 
-
 ## Using Multi-Build Stage:
-Here i use two Build stage, In 1st build stage i use gcc image which is neccessary to compile C-app this image size is very large & then i use ubuntu image which is small and also have C runtime to run C-app.
+- Here i use two Build stage, In 1st build stage i use gcc image which is neccessary to compile C-app this image size is very large & then i use ubuntu image which is small and also have C runtime to run C-app.
 
 ![Dockerfile](https://github.com/user-attachments/assets/9649b271-8393-49b6-bd80-6aef0d5798fe)
 
      docker build -t multic-app:v1 -f multiB-Dockerfile --no-cache .
 
 ![multi-build](https://github.com/user-attachments/assets/4743de1c-e8c0-4890-80be-777992bff4c1)
-
-see very small size we found.
+- see very small size we found.
 ![image-size](https://github.com/user-attachments/assets/211ce201-5f87-4df1-a926-9a42e3d4f965)
 
      docker run multic-app:v1
@@ -117,8 +113,7 @@ This images size is very small & you can install the runtime or program that you
     docker build -t alpine-app:v1 -f alpine-Dockerfile:v1 .
 
 ![alpine-build](https://github.com/user-attachments/assets/938b1944-0059-41fa-9c8c-a5823be48140)
-
-Image size is very small:
+- Image size is very small:
 ![alpine-image-size](https://github.com/user-attachments/assets/1ff8ea01-b439-487e-ade7-8846ccc60373)
 
      docker run -it alpine-app:v1
@@ -137,8 +132,7 @@ Scratch image is smallest image ever.
      docker build -t scratch-app:v1 -f scratch-Dockerfile .
 
 ![Scratch-build](https://github.com/user-attachments/assets/806b86b2-a278-472f-9f33-3d9be3bbc5a6)
-
-Image size smallest now:
+- Image size smallest now:
 ![small-size-scratch](https://github.com/user-attachments/assets/57463241-5851-4c82-960c-5cb4b6ab269b)
 
      docker run --rm scratch-app:v1
