@@ -109,5 +109,20 @@ This images do not include anything from any distribution; They provide only bar
 
 ![run-cmd](https://github.com/user-attachments/assets/b179d78d-8b8b-4b9e-b014-ac3b77ea8059)
 
-# 5 Alpine image:
-This images size is very small & you can install the runtime or program that you neeed in that image.
+# 5. Alpine image:
+This images size is very small & you can install the runtime or program that you neeed in that image.(Search on DockerHub)
+
+    docker build -t alpine-app:v1 -f alpine-Dockerfile:v1 .
+
+![alpine-build](https://github.com/user-attachments/assets/938b1944-0059-41fa-9c8c-a5823be48140)
+
+Image size is very small:
+![alpine-image-size](https://github.com/user-attachments/assets/1ff8ea01-b439-487e-ade7-8846ccc60373)
+
+     docker run -it alpine-app:v1
+
+![run-cmd-alpine](https://github.com/user-attachments/assets/17065b10-da95-4f6f-b0a2-e1c81d525303)
+
+# 6. Scratch image:
+Scratch image is smallest image ever.
+
