@@ -10,10 +10,12 @@
 ## Some Image Optimization methods:
 1. **Build Tool**
 2. **Image layering**
-3. **Scratch & Alpine image**
-4. **Multi-Stage Build**
+3. **Multi-Stage Build**
+4. **Distroless-images**
+5. **Alpine image**
+6. **Scratch image**
 
-# 1: [Docker Build tool]
+# 1. Docker Build tool
 
 ## Using legacy Docker build tool we can see how metadata is kept:
 Use old docker build tool :
