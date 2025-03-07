@@ -1,0 +1,11 @@
+FROM gcc:6 as build-compile
+WORKDIR /app
+COPY app.c app.c 
+RUN gcc app.c -o app
+
+FROM alpine:latest as build-runC
+# Install the necessary libraries for running C programs (libc)
+RUN apk update && apk add --no-cache libc6-compat
+WORKDIR /app
+COPY --from=build-compile /app/app  app
+CMD ["./app"]
