@@ -1,4 +1,5 @@
 # Docker-image-optimization
+![Optimiziation of Docker Images](https://github.com/user-attachments/assets/3eac8c70-b9ab-4ab5-bd41-2be7975923fd)
 
 ## Image Optimization:
 - When we run a Container from an image, It gets loaded into RAM. This means that if image size is large the entire large of data is loaded into RAM.
